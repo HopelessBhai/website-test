@@ -1,0 +1,102 @@
+---
+layout: base
+---
+<div style="
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;"
+ >
+    <h1 id="typewriter" style = " font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none;"></h1>
+
+    <script>
+        const text = "<hello_nerds!>";
+        const speed = 200; // Typing speed in milliseconds
+        let index = 0;
+        // document.getElementById("typewriter").textContent = " ";
+        function typeWriter() {
+            if (index == text.length) {
+                document.getElementById("typewriter").textContent = "";
+                index=0;
+            }
+            else if (index < text.length) {
+                document.getElementById("typewriter").textContent += text[index];
+                index++;
+            }
+            setTimeout(typeWriter, speed); // Call the function again for the next character
+        }
+        typeWriter(); // Start the typing animation
+    </script>
+    <br><br>
+    <p style="font-size: 1.25rem; color: rgba(0, 0, 0, 0.8); font-family: 'Proggy', monospace; text-decoration: none;">
+       Thank you for visiting my blog. Do let me know your thoughts on the content. I would love to hear from you.
+    </p>
+</div>
+
+
+<div id="quote-space" style="
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Georgia', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+">
+    The best way to learn something is to by solving real-world problems. Just like how I am learning HTML by building this website :)
+</div>
+
+
+<div style="
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;"
+ >
+    <h1 style = " font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none;">About Me</h1>
+    <br>
+    <p style="font-size: 1.25rem; color: rgba(0, 0, 0, 0.8); font-family: 'Proggy', monospace; text-decoration: none;">
+        I am Atmadip Goswami. I am currently pursuing my bachelor's degree from IIT Madras. I am super-excited about AI, ML and it's applications.
+        I have done multiple projects in the field of AI and ML ranging from IR systems (aka Google) to super-niche quant research projects.
+        Do check out my <a href="https://github.com/HopelessBhai" style="color: darkgreen; text-decoration: none;">GitHub page</a> to know more about them.
+    </p>
+</div>
+
+<div style="width: 80%; margin: auto; overflow-x: auto;background-color: #1e1e1e; padding: 20px; border-radius: 20px;">
+    <pre><code class="language-python">
+class Atmadip:
+    def __init__(self):
+        self.name = "Atmadip Goswami"
+        self.humour = float('inf')
+        self.skills = ['Python', 'Tensorflow', 'PyTorch', 'C++', 'Java'] #too lazy to update :P
+        self.hobbies = ['Gym', 'Reading', 'Coding'] # Gym is the therapy :)
+
+    def say_hi(self):
+        print("Hello, nerds!")
+    
+    def get_in_touch(self):
+        print("Check the bottom of the page.")
+
+    def viewer(self):
+        if LikeMyBlog():
+            print('Offer me a job (I am broke :())')
+        else:
+            print("I'll keep writing!")
+
+    def beforeYouGo(self):
+        print("Go to the coffee symbol page on top and do the good deed :)")
+
+    </code></pre>
+</div>
+
+<!-- Include Prism.js for syntax highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+
+
+

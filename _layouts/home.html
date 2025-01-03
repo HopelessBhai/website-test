@@ -1,26 +1,27 @@
 ---
 layout: base
 ---
-<div class="flex justify-center py-8 ">
-  <article class="text-center prose prose-p:font-extralight prose-slate dark:prose-invert primary-underline">
-    {{ content }}
-  </article>
+<div class="flex justify-center py-8">
+  {{content}}
 </div>
 
-<div class="md:w-4/5 mx-auto gap-4 md:gap-6 columns-2 md:columns-3 mb-10">
+<div style="width: 80%; margin: auto; gap: 24px; columns: 2; column-gap: 24px; margin-bottom: 40px;">
   {% for post in site.posts %}
-  <div class="md:fadeIn pb-8 mb-8 break-inside-avoid-column ">
-    <div
-      class="hover:underline hover:decoration-2 hover:underline-offset-4 transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-104 duration-300">
-      <a href="{{ post.url | relative_url }}">
-        <img src="{{ post.image | relative_url }}" alt="" class="w-full max-w-screen-sm h-auto shadow-md">
-        <h2 class="text-lg md:text-xl lg:text-2xl pt-5 text-ellipsis overflow-hidden">{{post.title}}</h2>
+  <div style="padding-bottom: 32px; margin-bottom: 32px; break-inside: avoid;">
+    <div style="transition: all 0.3s ease-in-out; transform-origin: center;">
+      <a href="{{ post.url | relative_url }}" 
+         style="text-decoration: none; transition: all 0.3s ease-in-out; display: block;">
+        <img src="{{ post.image | relative_url }}" alt="" 
+             style="width: 100%; max-width: 640px; height: auto; box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);">
+        <h2 style="font-size: 1.25rem; padding-top: 20px; font-family: monospace; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;">
+          {{ post.title }}
+        </h2>
       </a>
     </div>
 
-    <div class="pt-2">
+    <div style="padding-top: 8px;">
       {% for tag in post.tags limit:3 %}
-      <span class="text-xs text-slate-700 dark:text-slate-100/80 align-middle">#{{tag}}</span>
+      <span style="font-size: 0.75rem; color: rgba(100, 100, 100, 0.8); vertical-align: middle;">#{{ tag }}</span>
       {% endfor %}
     </div>
   </div>

@@ -1,11 +1,14 @@
 ---
 title: about
-layout: page
+layout: about_page
 ---
-## Modo nostra
+<div style="text-align: center; margin: 20px 0;">
+    <h1 style="font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none;">
+    hello nerds
+    </h1>
+</div>
 
-Lorem markdownum mihi; hic sonantem tenebat telum successu mollierant inani
-avoque. Harena et laedor bisque moenia veniat facit lebetes tum non?
+
 
 > Iunctissima lapsus illis; venit protervis exequialia absit tristia et
 > **locum** cum ut ad convertor tamen. Ad mea cui! Pedibus sit inque quaerit [ac
