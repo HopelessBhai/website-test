@@ -8,6 +8,8 @@ author: Atmadip
 
 lang: en
 
+# permalink: pretty
+
 plugins:
   - jekyll-seo-tag
 
