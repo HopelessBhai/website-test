@@ -1,4 +1,4 @@
 ---
-title: about
-layout: about
+title: about_me
+layout: about_me
 ---
