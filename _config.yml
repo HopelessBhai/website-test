@@ -1,6 +1,6 @@
 domain: example.com
 url: https://example.com
-baseurl: "/website-test"
+baseurl: "/blog"
 
 title: blog
 email: work.atmadipg@gmail.com
