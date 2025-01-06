@@ -1,12 +1,14 @@
 domain: example.com
 url: https://example.com
-baseurl: "/blog"
+baseurl: "/website-test"
 
 title: blog
 email: work.atmadipg@gmail.com
 author: Atmadip
 
 lang: en
+
+# permalink: pretty
 
 plugins:
   - jekyll-seo-tag
