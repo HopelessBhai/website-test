@@ -1,0 +1,196 @@
+---
+layout: base
+---
+<div style="text-align: center;  width: 80%; margin: 20px auto;">
+    <h1 id="typewriter" style="font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none; visibility: visible; height: 3rem;"> </h1>
+    
+    <script>
+        const typewriterText = "hello_nerds.";
+        const typewriterSpeed = 150; // Typing speed
+        const blinkDuration = 300; // Duration for blinking cursor
+        const blinkspeed = 500; // Speed for blinking cursor
+        const eraseSpeed = 50; // Speed for erasing
+        let typewriterIndex = 0;
+        let isErasing = false;
+      
+        function typeTypewriter() {
+          const typewriterDiv = document.getElementById("typewriter");
+      
+          if (!isErasing) {
+            // Typing letters with <>
+            if (typewriterIndex <= typewriterText.length) {
+                typewriterDiv.textContent = `<${typewriterText.substring(0, typewriterIndex)}>`;
+                typewriterIndex++;
+                setTimeout(typeTypewriter, typewriterSpeed);
+            } else {
+                // Add blinking cursor for a few seconds after typing
+                let blinkCount = 0;
+                const maxBlinks = 6; // Blink for 6 cycles (3 seconds if blink interval is 500ms)
+                const blinkInterval = 500; // Blink every 500ms
+                let blink=false;
+
+                const blinkCursor = () => {
+                    if (blinkCount < maxBlinks) {
+                        if (blink) {
+                            typewriterDiv.textContent = `<${typewriterText}.>`; // Remove cursor
+                            blink=false;
+                        } else {
+                            typewriterDiv.textContent = `<${typewriterText}|>`; // Add cursor
+                            blink=true;
+                        }
+                        blinkCount++;
+                        setTimeout(blinkCursor, blinkInterval);
+                    } else {
+                        // Stop blinking and start erasing
+                        typewriterDiv.textContent = `<${typewriterText}>`; // Ensure text is without cursor
+                        isErasing = true;
+                        setTimeout(typeTypewriter, eraseSpeed); // Start erasing phase
+                    }
+                };
+
+                blinkCursor(); // Start the blinking loop
+            }
+        }
+        else {
+            // Erase letters until only <> is left
+            if (typewriterIndex > 0) {
+              typewriterIndex--;
+              typewriterDiv.textContent = `<${typewriterText.substring(0, typewriterIndex)}>`;
+              setTimeout(typeTypewriter, eraseSpeed);
+            } else {
+              // Reset for the next loop
+              isErasing = false;
+              typewriterDiv.textContent = "<>";
+              setTimeout(typeTypewriter, typewriterSpeed);
+            }
+          }
+        }
+      
+        typeTypewriter(); // Start the typewriter animation
+      </script>
+      
+    <br><br>
+    <p style="font-size: 1.25rem; color: rgba(0, 0, 0, 0.8); font-family: 'Proggy', monospace; text-decoration: none;">
+       Thank you for visiting my blog. I personally write blogs as a way to teach myself something that's been on my mind for sometime. 
+       I assume the reader has absolute zero knowledge about the topic and try to explain it in the simplest way possible. Do let me know your thoughts on the content. 
+       Below you can find my social handles. I would love to hear from you.
+    </p>
+</div>
+
+
+
+<div id="quote-space" style="
+    width: 60%;
+    margin: 50px auto;
+    text-align: center;
+    padding: 50px;
+    font-family: 'Baskerville', serif;
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #333;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+">
+    The best way to learn something is by solving real-world problems. Just like how I am learning HTML by building this website :)
+</div>
+
+
+<div style="
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: 'Fira Code', monospace;"
+>
+    <div style="flex: 1; animation: fadeInLeft 1.5s;">
+        <h1 style = " font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none;">About Me</h1>
+        <p style="font-size: 1.25rem; color: rgba(0, 0, 0, 0.8); font-family: 'Proggy', monospace;">
+            I am Atmadip Goswami. I am currently pursuing my bachelor's degree from IIT Madras. I am super-excited about AI, ML and its applications.
+            I have done multiple projects in the field of AI and ML ranging from IR systems (aka Google) to super-niche quant research projects.
+            Do check out my <a href="https://github.com/HopelessBhai" style="color: darkgreen; text-decoration: none;">GitHub page</a> to know more about them.
+        </p>
+    </div>
+    <div style="
+            width: 100%;
+            max-width: 300px;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            overflow: hidden;
+            margin: 0 auto 0 35px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        ">
+        <img src="assets\gallery_pics\CE22B045_photo.JPG" alt="Atmadip Goswami" style="
+            border-radius: 50%;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        " onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+    </div>
+</div>
+
+<style>
+    @keyframes fadeInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInRight {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+</style>
+
+
+<div style="width: 80%; margin: 50px auto 0; overflow-x: auto; background-color: #1e1e1e; padding: 20px; border-radius: 20px;">
+    <pre><code class="language-python">
+#Code to define myself :)
+class Atmadip:
+    def __init__(self):
+        self.name = "Atmadip Goswami"
+        self.humour = float('inf')
+        self.skills = ['Python', 'Tensorflow', 'PyTorch', 'C++', 'Java'] #too lazy to update :P
+        self.hobbies = ['Gym', 'Reading', 'Coding'] # Gym is the therapy :)
+
+    def say_hi(self):
+        print("Hello, nerds!")
+    
+    def get_in_touch(self):
+        print("Check the bottom of the page.")
+
+    def ifViewer(self):
+        if LikeMyBlog():
+            print('Offer me a job (I am broke :())')
+        else:
+            print("I'll keep writing!")
+
+    def beforeYouGo(self):
+        print("Go to the coffee symbol page on top and do the good deed :)")
+
+    </code></pre>
+</div>
+
+<!-- Include Prism.js for syntax highlighting -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+
+
+
+

@@ -2,13 +2,113 @@
 layout: base
 ---
 
-<div class="md:w-4/5 mx-auto columns-2 md:columns-3 my-10 gap-0">
-  {% for pic in site.data.gallery.photos %}
-  <div class="gallery-item">
-    <img src="{{ pic.url }}" alt="{{pic.description}}" class="w-full max-w-screen-sm h-auto shadow-md">
+<div style="text-align: center; margin: 20px 0;">
+  <h1 id="welcome" style="font-size: 4rem; font-weight: bold; color: #333; font-family: 'Fira Code', monospace; text-decoration: none;">Gallery</h1>
+  <p id="output" style="font-family: 'Proggy', monospace; font-size: 1.5rem; color: #555; white-space: pre-wrap; overflow: hidden;  visibility: hidden;"></p>
+</div>
+
+<div id="gallery" class="md:w-4/5 mx-auto columns-3 md:columns-3 my-10 gap-4">
+  {% for pic in site.data.photos.photos %}
+  <div class="gallery-item mb-6">
+    <img src="{{pic.url}}" alt="{{pic.description}}" class="w-full max-w-screen-sm h-auto shadow-md rounded-lg">
     <div class="overlay">
       <div class="text">{{pic.quote}}</div>
     </div>
   </div>
   {% endfor %}
 </div>
+
+<script>
+  // Shuffle function
+  function shufflePhotos() {
+    const gallery = document.getElementById('gallery');
+    const items = Array.from(gallery.children);
+    for (let i = items.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [items[i], items[j]] = [items[j], items[i]];
+    }
+    gallery.innerHTML = ''; // Clear existing items
+    items.forEach(item => gallery.appendChild(item)); // Append shuffled items
+  }
+
+  // Call the shuffle function on page load
+  window.addEventListener('DOMContentLoaded', shufflePhotos);
+</script>
+
+<script>
+  function wait(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async function showOutput() {
+    await wait(1000); // Wait for 1 second
+    const output = document.getElementById('output');
+    output.style.visibility = 'visible'; // Make the output visible
+  }
+
+  // Call the showOutput function on page load
+  window.addEventListener('DOMContentLoaded', showOutput);
+</script>
+
+
+
+
+<script>
+
+  function typeText() {
+  if (index < text.length) {
+    output.textContent = text.substring(0, index + 1) + "|"; // Add cursor while typing
+    index++;
+    setTimeout(typeText, 100); // Adjust typing speed
+  } else {
+    output.textContent = text+ "."; // Remove the cursor once typing is complete
+    setTimeout(() => {
+      blinkCursor();
+    }, 500);
+  }
+}
+
+function blinkCursor() {
+  if (output.textContent.endsWith("|")) {
+    output.textContent = text+"."; // Remove cursor
+  } else {
+    output.textContent = text + "|"; // Add cursor
+  }
+  setTimeout(blinkCursor, 500); // Adjust blinking speed
+}
+
+  // Initialize variables
+  const text = "A snapshot of the author's runtime..";
+  const output = document.getElementById("output");
+  let index = 0;
+
+  // Start typing on page load
+  window.onload = typeText;
+
+
+  window.onload = typeText; // Start typing on page load
+</script>
+
+
+<style>
+  #welcome {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #333;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+</style>
+
+
+
