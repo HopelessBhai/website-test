@@ -10,7 +10,10 @@ lang: en
 
 # permalink: pretty
 
+plugins:
+  - jekyll-seo-tag
 
+  
 color: "#13ccf9"
 
 rrss:
