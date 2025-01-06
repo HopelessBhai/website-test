@@ -85,3 +85,25 @@
   /* Muestra el overlay */
 }
 
+
+:root {
+  --text-color: #333;
+}
+
+.dark :root {
+  --text-color: #fff; /* Light color for dark mode */
+}
+
+body {
+  color: var(--text-color); /* Use the variable for text color */
+}
+
+
+body {
+  background-color: #f9f9f9; /* Light background color */
+}
+
+/* Dark mode */
+.dark body {
+  background-color: #121212; /* Dark background color */
+}

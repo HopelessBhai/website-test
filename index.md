@@ -3,9 +3,9 @@ layout: home
 ---
 
 <div style="text-align: center; margin: 20px 0;">
-    <h1 id="welcome" style="font-size: 4rem; font-weight: bold; color: #333; font-family: 'Fira Code', monospace; text-decoration: none;"></h1>
+    <h1 id="welcome" style="font-size: 4rem; font-weight: bold; color: var(--text-color); font-family: 'Fira Code', monospace; text-decoration: none;"></h1>
     <br>
-    <p id="output" style="font-family: 'Proggy', monospace; font-size: 1.5rem; color: #555; white-space: pre-wrap; visibility: visible;">Navigate below to find my blogs</p>
+    <p id="output" style="font-family: 'Proggy', monospace; font-size: 1.5rem; color: var(--text-color); white-space: pre-wrap; visibility: visible;">Navigate below to find my blogs</p>
     <script>
         const welcomeDiv = document.getElementById("welcome");
         const outputParagraph = document.getElementById("output");

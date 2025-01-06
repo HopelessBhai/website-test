@@ -2,8 +2,8 @@
 layout: base
 ---
 <div style="text-align: center;  width: 80%; margin: 20px auto;">
-    <h1 id="typewriter" style="font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none; visibility: visible; height: 3rem;"> </h1>
-    
+    <h1 id="typewriter" style="font-size: 2.5rem; font-weight: bold; color: var(--text-color); font-family: 'Fira Code', monospace; text-decoration: none; visibility: visible; height: 3rem;"> </h1>
+    <link rel="stylesheet" href="{{ '/assets/css/styles.css' | relative_url }}">
     <script>
         const typewriterText = "hello_nerds.";
         const typewriterSpeed = 150; // Typing speed
@@ -70,7 +70,7 @@ layout: base
       </script>
       
     <br><br>
-    <p style="font-size: 1.25rem; color: rgba(0, 0, 0, 0.8); font-family: 'Proggy', monospace; text-decoration: none;">
+    <p style="font-size: 1.25rem; color: var(--text-color); font-family: 'Proggy', monospace; text-decoration: none;">
        Thank you for visiting my blog. I personally write blogs as a way to teach myself something that's been on my mind for sometime. 
        I assume the reader has absolute zero knowledge about the topic and try to explain it in the simplest way possible. Do let me know your thoughts on the content. 
        Below you can find my social handles. I would love to hear from you.
@@ -87,8 +87,7 @@ layout: base
     font-family: 'Baskerville', serif;
     font-size: 1.5rem;
     font-style: italic;
-    color: #333;
-    background-color: #f9f9f9;
+    color: var(--text-color);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 ">
     The best way to learn something is by solving real-world problems. Just like how I am learning HTML by building this website :)
@@ -105,8 +104,8 @@ layout: base
     font-family: 'Fira Code', monospace;"
 >
     <div style="flex: 1; animation: fadeInLeft 1.5s;">
-        <h1 style = " font-size: 2.5rem; font-weight: bold; color: black; font-family: 'Fira Code', monospace; text-decoration: none;">About Me</h1>
-        <p style="font-size: 1.25rem; color: rgba(0, 0, 0, 0.8); font-family: 'Proggy', monospace;">
+        <h1 style = " font-size: 2.5rem; font-weight: bold; color: var(--text-color); font-family: 'Fira Code', monospace; text-decoration: none;">About Me</h1>
+        <p style="font-size: 1.25rem; color: var(--text-color); font-family: 'Proggy', monospace;">
             I am Atmadip Goswami. I am currently pursuing my bachelor's degree from IIT Madras. I am super-excited about AI, ML and its applications.
             I have done multiple projects in the field of AI and ML ranging from IR systems (aka Google) to super-niche quant research projects.
             Do check out my <a href="https://github.com/HopelessBhai" style="color: darkgreen; text-decoration: none;">GitHub page</a> to know more about them.

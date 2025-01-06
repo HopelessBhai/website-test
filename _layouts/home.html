@@ -21,7 +21,7 @@ layout: base
 
     <div style="padding-top: 4px;">
       {% for tag in post.tags limit:3 %}
-      <span style="font-size: 0.75rem; color: rgba(100, 100, 100, 0.8); vertical-align: text-top;">#{{ tag }}</span>
+      <span style="font-size: 0.75rem; color: var(--text-color);; vertical-align: text-top;">#{{ tag }}</span>
       {% endfor %}
     </div>
   </div>
