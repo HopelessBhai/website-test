@@ -28,19 +28,25 @@ layout: base
   function shufflePhotos() {
     const gallery = document.getElementById('gallery');
     const items = Array.from(gallery.children);
+
+    // Shuffle array in place
     for (let i = items.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [items[i], items[j]] = [items[j], items[i]];
     }
-    gallery.innerHTML = ''; // Clear existing items
-    items.forEach(item => gallery.appendChild(item)); // Append shuffled items
+
+    // Use a DocumentFragment to minimize reflows and repaints
+    const fragment = document.createDocumentFragment();
+    items.forEach(item => fragment.appendChild(item));
+    gallery.appendChild(fragment); // Append all shuffled items at once
   }
 
   // Call the shuffle function on page load
   window.addEventListener('DOMContentLoaded', shufflePhotos);
 </script>
 
-<script>
+
+<!-- <script>
   function wait(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -53,7 +59,7 @@ layout: base
 
   // Call the showOutput function on page load
   window.addEventListener('DOMContentLoaded', showOutput);
-</script>
+</script> -->
 
 
 
