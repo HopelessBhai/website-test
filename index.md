@@ -2,6 +2,7 @@
 layout: home
 ---
 
+
 <div style="text-align: center; margin: 20px 0;">
     <h1 id="welcome" style="font-size: 4rem; font-weight: bold; color: var(--text-color); font-family: 'Fira Code', monospace; text-decoration: none;"></h1>
     <br>
