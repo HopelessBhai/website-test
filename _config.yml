@@ -1,6 +1,6 @@
-domain: example.com
-url: https://example.com
-baseurl: "/blog"
+domain: "atmadip.lovestoblog.com"
+url: "https://www.atmadip.lovestoblog.com"
+baseurl: ""
 
 title: Atmadip's blog
 email: work.atmadipg@gmail.com
