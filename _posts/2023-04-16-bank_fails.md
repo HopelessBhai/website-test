@@ -38,9 +38,9 @@ Determined to steer its course, the bank decided to increase investors’ confid
 
 Hence, on March 2023, Swiss regulators voted on selling the bank assets to UBS, without shareholder approval, for an amount of $3.3 billion. Although this amount might seem hefty, it is paltry compared to the combined value of the bank’s total assets, $1.4 trillion(AUM).
 
-![](https://cdn-images-1.medium.com/max/800/1*tp6VGoT5h3g_gq9Ah8uGGQ.jpeg)
-
-UBS agrees to buy Credit Suisse for $3.3 billion
+| ![](https://cdn-images-1.medium.com/max/800/1*tp6VGoT5h3g_gq9Ah8uGGQ.jpeg) |
+|:--:|
+| UBS agrees to buy Credit Suisse for $3.3 billion |
 
 ### **Silicon Valley Bank:**
 
@@ -58,9 +58,9 @@ Realizing this tumultuous time, tech startups started withdrawing money from the
 
 Hence, to prevent more damage and a full-blown bankruptcy, the DFPI (Department of Financial Protection and Innovation) seized and collapsed the bank on March 10, 2023. The FDIC (Federal Deposit Insurance Corporation) insured depositors of up to $250,000, depending on their deposit level.
 
-![](https://cdn-images-1.medium.com/max/800/1*BWKK0Q2CNBef6nhKRtacHA.jpeg)
-
-Silicon Valley Bank collapsed on March 10, 2023
+| ![](https://cdn-images-1.medium.com/max/800/1*BWKK0Q2CNBef6nhKRtacHA.jpeg) |
+|:--:|
+| Silicon Valley Bank collapsed on March 10, 2023 |
 
 ### **Signature Bank:**
 
@@ -72,12 +72,6 @@ Although the bank was never alleged with fraud charges, its heavy involvement wi
 
 The FDIC also assured customers access to deposits and uninterrupted service throughout.
 
-![](https://cdn-images-1.medium.com/max/800/1*8WqYygO-8ZUmz6RI1Uxb3Q.jpeg)
-
-Signature Bank was the 3rd largest bank failure in U.S history
-
-By [ColdMeat2003](https://medium.com/@atmadipg) on [April 16, 2023](https://medium.com/p/c214d6458e60).
-
-[Canonical link](https://medium.com/@atmadipg/qualitative-assessment-of-recent-bank-failures-credit-suisse-svb-etc-c214d6458e60)
-
-Exported from [Medium](https://medium.com) on January 3, 2025.
+| ![](https://cdn-images-1.medium.com/max/800/1*8WqYygO-8ZUmz6RI1Uxb3Q.jpeg) |
+|:--:|
+| Signature Bank was the 3rd largest bank failure in U.S history |
