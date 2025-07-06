@@ -4,8 +4,8 @@ import subprocess
 import platform
 
 # Define the folder where your photos are stored
-photos_folder = "assets/gallery_pics"  # Use "/" for cross-platform compatibility
-output_file = "photos.yaml"
+photos_folder = r"assets/gallery_pics"  # Use "/" for cross-platform compatibility
+output_file = r"_data/photos.yaml"
 
 # Function to open image with default viewer
 def open_image(file_path):
